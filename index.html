@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>직원식당 만족도 조사</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <div class="app-header" id="app-header">
+      <div class="hospital-name">포항시티병원 · 직원식당</div>
+      <h1>만족도 조사</h1>
+      <div class="progress-row">
+        <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-fill"></div></div>
+        <span class="progress-count" id="progress-count">0 / 9</span>
+      </div>
+    </div>
+
+    <div class="slides-wrap">
+      <div class="slide active" id="slide-0">
+        <div class="center-screen welcome-screen">
+          <div class="big-icon welcome-icon">🍱</div>
+          <h2 class="welcome-title">직원식당<br>만족도 조사</h2>
+          <p class="welcome-desc">더 나은 식사 환경을 만들기 위해<br>솔직한 의견을 남겨주세요.<br>총 9개 항목, 약 3분이면 완료됩니다.</p>
+          <div class="anon-badge welcome-badge">🔒 무기명 · 익명 보장</div>
+          <button class="btn btn-start" id="btn-start-main">설문 시작하기 →</button>
+        </div>
+      </div>
+
+      <div class="slide" id="slide-1"></div>
+      <div class="slide" id="slide-2"></div>
+      <div class="slide" id="slide-3"></div>
+      <div class="slide" id="slide-4"></div>
+      <div class="slide" id="slide-5"></div>
+      <div class="slide" id="slide-6"></div>
+      <div class="slide" id="slide-7"></div>
+
+      <div class="slide" id="slide-8">
+        <div class="q-step">서술 1 / 2 · 선택사항</div><span class="q-icon">🤔</span>
+        <div class="q-title">식당을 이용하지 않게 되는 이유가 있나요?</div>
+        <div class="q-desc">이용을 꺼리게 된 이유를 자유롭게 작성해 주세요.</div>
+        <textarea id="reason" placeholder="예) 줄이 길어서 시간이 부족합니다 / 특정 메뉴가 반복되어 질립니다 등"></textarea>
+      </div>
+
+      <div class="slide" id="slide-9">
+        <div class="q-step">서술 2 / 2 · 선택사항</div><span class="q-icon">✏️</span>
+        <div class="q-title">개선이 필요한 점을 알려주세요</div>
+        <div class="q-desc">어떤 의견이든 환영합니다. 자유롭게 작성해 주세요.</div>
+        <textarea id="improvement" placeholder="예) 야채 반찬을 더 다양하게 / 식기 세척이 더 철저했으면 합니다 등"></textarea>
+      </div>
+
+      <div class="slide" id="slide-thanks">
+        <div class="center-screen">
+          <div class="thanks-icon-wrap">🎉</div>
+          <h2>소중한 의견<br>감사합니다!</h2>
+          <p>제출해 주신 응답은<br>직원식당 환경 개선에 적극 반영하겠습니다.<br><br>더 나은 식사 환경을 만들기 위해<br>최선을 다하겠습니다. 🙏</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-bar" id="nav-bar">
+      <button class="btn btn-prev" id="btn-prev">←</button>
+      <button class="btn btn-next" id="btn-next">시작하기 →</button>
+    </div>
+  </div>
+
+  <script src="/api/runtime-config.js"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/questions.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
