@@ -11,24 +11,24 @@ function toCsvValue(value) {
 }
 
 function toCsv(rows) {
-  const headers = [
-    "id",
-    "taste",
-    "menu",
-    "salt",
-    "temperature",
-    "nutrition",
-    "hygiene",
-    "service",
-    "reason",
-    "improvement",
-    "submitted_at",
-    "created_at"
+  const columns = [
+    { key: "id", label: "번호" },
+    { key: "taste", label: "음식 맛" },
+    { key: "menu", label: "식단 구성" },
+    { key: "salt", label: "간(염도)" },
+    { key: "temperature", label: "음식 온도" },
+    { key: "nutrition", label: "영양 균형" },
+    { key: "hygiene", label: "위생 상태" },
+    { key: "service", label: "친절도" },
+    { key: "reason", label: "이용하지 않는 이유" },
+    { key: "improvement", label: "개선 필요 사항" },
+    { key: "submitted_at", label: "제출 일시" },
+    { key: "created_at", label: "생성 일시" }
   ];
 
-  const lines = [headers.join(",")];
+  const lines = [columns.map((column) => column.label).join(",")];
   rows.forEach((row) => {
-    const line = headers.map((key) => toCsvValue(row[key])).join(",");
+    const line = columns.map((column) => toCsvValue(row[column.key])).join(",");
     lines.push(line);
   });
 
