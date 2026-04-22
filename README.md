@@ -25,6 +25,7 @@ npx serve .
 3. Environment Variables 추가
    - `SUPABASE_URL`
    - `SUPABASE_ANON_KEY`
+   - `SUPABASE_SERVICE_ROLE_KEY` (관리자 응답 다운로드용)
 4. Deploy
 
 ## 4) 런타임 환경변수 방식
@@ -38,3 +39,11 @@ npx serve .
 
 - 익명 남용 방지를 위해 Supabase에 rate limiting 또는 captcha 추가
 - 운영 대시보드용 조회 API는 `service_role` 키를 서버에서만 사용
+
+## 6) 관리자 엑셀 다운로드
+
+- 시작 화면 하단의 `관리자 데이터 추출`에서 로그인 후 CSV 파일을 다운로드합니다.
+- 현재 기본 관리자 계정
+  - 아이디: `guamct`
+  - 비밀번호: `hosp7533`
+- CSV는 엑셀에서 바로 열 수 있습니다.

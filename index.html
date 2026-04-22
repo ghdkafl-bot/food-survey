@@ -26,6 +26,14 @@
           <p class="welcome-desc">더 나은 식사 환경을 만들기 위해<br>솔직한 의견을 남겨주세요.<br>총 9개 항목, 약 3분이면 완료됩니다.</p>
           <div class="anon-badge welcome-badge">🔒 무기명 · 익명 보장</div>
           <button class="btn btn-start" id="btn-start-main">설문 시작하기 →</button>
+          <div class="admin-card">
+            <h3 class="admin-title">관리자 데이터 추출</h3>
+            <p class="admin-desc">관리자 계정으로 로그인 후 응답을 엑셀 파일로 내려받을 수 있습니다.</p>
+            <input class="admin-input" id="admin-id" type="text" placeholder="관리자 아이디" autocomplete="username" />
+            <input class="admin-input" id="admin-password" type="password" placeholder="비밀번호" autocomplete="current-password" />
+            <button class="btn admin-btn" id="admin-export-btn">응답 엑셀 다운로드</button>
+            <p class="admin-feedback" id="admin-feedback"></p>
+          </div>
         </div>
       </div>
 
@@ -70,5 +78,6 @@
   <script src="./js/config.js"></script>
   <script src="./js/questions.js"></script>
   <script src="./js/app.js"></script>
+  <script src="./js/admin.js"></script>
 </body>
 </html>
